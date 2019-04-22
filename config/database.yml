@@ -2,11 +2,11 @@ default: &default
   adapter: mysql2
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
-  databse: ENV.fetch("DB_NAME")
-  host: ENV.fetch("DB_HOST")
-  port: ENV.fetch("DB_PORT")
-  username: ENV.fetch("DB_USER")
-  password: ENV.fetch("DB_PASSWORD")
+  databse: ENV["DB_NAME"]
+  host: ENV["DB_HOST"]
+  port: ENV["DB_PORT"]
+  username: ENV["DB_USER"]
+  password: ENV["DB_PASSWORD"]
 
 development:
   <<: *default
